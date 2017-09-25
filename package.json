@@ -1,0 +1,13 @@
+{
+	"name": "@ffres/eslint-config",
+	"version": "0.0.0",
+	"description": "FinancialForce ESLint configuration",
+	"main": "index.js",
+	"repository": {
+		"type": "git",
+		"url": "https://stash.dev.financialforce.com/users/mwood_financialforce.com/repos/ffres--eslint-config"
+	},
+	"keywords": [],
+	"author": "FinancialForce.com",
+	"license": "ISC"
+}
