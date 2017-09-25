@@ -1,0 +1,13 @@
+.DS_Store
+
+*.sublime-workspace
+*.sublime-project
+
+local.test.properties
+local.run.properties
+
+node_modules
+
+npm-debug.log
+
+*.tgz
