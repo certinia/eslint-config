@@ -13,7 +13,7 @@
 	"keywords": [],
 	"author": "FinancialForce.com",
 	"license": "ISC",
-	"devDependencies": {
-		"eslint": "^4.7.2"
+	"dependencies": {
+		"eslint": "4.7.2"
 	}
 }
