@@ -3,11 +3,17 @@
 	"version": "0.0.0",
 	"description": "FinancialForce ESLint configuration",
 	"main": "index.js",
+	"scripts": {
+		"test": "eslint ."
+	},
 	"repository": {
 		"type": "git",
 		"url": "https://stash.dev.financialforce.com/projects/RESEARCH/repos/ffres--eslint-config"
 	},
 	"keywords": [],
 	"author": "FinancialForce.com",
-	"license": "ISC"
+	"license": "ISC",
+	"devDependencies": {
+		"eslint": "^4.7.2"
+	}
 }
