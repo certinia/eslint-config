@@ -23,12 +23,6 @@
 		"**/.DS_Store": true,
 		"**/coverage": true
 	},
-	"lcov.path": "coverage/lcov.info",
-	"lcov.watch": [{
-		"pattern": "**/*.js",
-		"command": "npm test"
-	}],
-	"runCurrentTest.run": "npm run single-test -- ${relativeTestPath}",
 	"terminal.integrated.scrollback": 10000,
 	"workbench.colorCustomizations": {
 		"activityBar.foreground": "#FF0000"
