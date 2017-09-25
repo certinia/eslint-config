@@ -10,7 +10,10 @@
 			]
 		}
 	},
-	"beautify.ignore": ["package.json"],
+	"beautify.ignore": [
+		"package.json",
+		"package-lock.json"
+	],
 	"editor.detectIndentation": false,
 	"editor.formatOnSave": true,
 	"editor.insertSpaces": false,
