@@ -1,5 +1,5 @@
 {
-	"name": "@ffres/eslint-config",
+	"name": "@financialforcedev/eslint-config",
 	"version": "1.0.0",
 	"description": "FinancialForce ESLint configuration",
 	"main": "index.js",
@@ -8,11 +8,11 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://stash.dev.financialforce.com/projects/RESEARCH/repos/ffres--eslint-config"
+		"url": "https://stash.dev.financialforce.com/projects/RESEARCH/repos/financialforcedev--eslint-config"
 	},
 	"keywords": [],
-	"author": "FinancialForce.com",
-	"license": "ISC",
+	"author": "financialforce",
+	"license": "BSD-3-Clause",
 	"dependencies": {
 		"eslint": "4.7.2"
 	}
