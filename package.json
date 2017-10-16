@@ -1,6 +1,6 @@
 {
 	"name": "@financialforcedev/eslint-config",
-	"version": "3.0.0",
+	"version": "3.0.1",
 	"description": "FinancialForce ESLint configuration",
 	"main": "index.js",
 	"scripts": {
