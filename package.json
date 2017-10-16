@@ -8,7 +8,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://stash.dev.financialforce.com/projects/RESEARCH/repos/financialforcedev--eslint-config"
+		"url": "https://github.com/financialforcedev/financialforcedev--eslint-config"
 	},
 	"keywords": [],
 	"author": "financialforce",
