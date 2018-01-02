@@ -26,6 +26,7 @@
 		"**/.DS_Store": true,
 		"**/coverage": true
 	},
+	"files.insertFinalNewline": true,
 	"terminal.integrated.scrollback": 10000,
 	"workbench.colorCustomizations": {
 		"activityBar.foreground": "#FF0000"
