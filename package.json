@@ -4,6 +4,7 @@
 	"description": "FinancialForce ESLint configuration",
 	"main": "index.js",
 	"scripts": {
+		"postinstall": "node scripts/postinstall.js",
 		"test": "eslint ."
 	},
 	"repository": {
@@ -14,6 +15,7 @@
 	"author": "financialforce",
 	"license": "BSD-3-Clause",
 	"dependencies": {
+		"app-root-path": "2.0.1",
 		"eslint": "4.7.2"
 	}
 }
