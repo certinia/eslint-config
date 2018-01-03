@@ -120,9 +120,6 @@ module.exports = {
 		// Require isNaN(), disallow comparisons with the value NaN
 		'use-isnan': 'error',
 
-		// Require a valid jsdoc
-		'valid-jsdoc': 'off',
-
 		// Ensure that the results of typeof are compared against a valid string
 		'valid-typeof': 'error',
 
@@ -445,7 +442,9 @@ module.exports = {
 			nonwords: false
 		}],
 
-		// ES6 Features
+		// *****************************************
+		// *****  ES6 Features *********************
+		// *****************************************
 
 		// disallow unnecessary constructors
 		'no-useless-constructor': 'warn',
@@ -454,7 +453,54 @@ module.exports = {
 		'prefer-arrow-callback': 'warn',
 
 		// require const declarations for variables that are never reassigned after declared
-		'prefer-const': 'warn'
+		'prefer-const': 'warn',
+
+		// *****************************************
+		// ***** JS Doc style **********************
+		// *****************************************
+
+		// ideally we would require jsdoc for exported functions only, however eslint does not allow this
+		// turn it off
+		'require-jsdoc': 'off',
+
+		// enforce valid and consistent JSDoc comments
+		'valid-jsdoc': ['error', {
+
+			// enforces consistent documentation tags specified by an object whose properties mean instead of key use value
+			prefer: {
+				arg: 'param',
+				argument: 'param',
+				'return': 'returns',
+				virtual: 'abstract'
+			},
+
+			// enforces consistent type strings specified by an object whose properties mean instead of key use value 
+			preferType: {
+				array: 'Array',
+				Boolean: 'boolean',
+				Integer: 'integer',
+				Number: 'number',
+				'function': 'Function',
+				object: 'Object',
+				String: 'string'
+			},
+
+			// requires a return tag if and only if the function or method has a return statement (this option value does apply to constructors)
+			requireReturn: false,
+
+			// disallow missing type in return tags
+			requireReturnType: true,
+
+			// specifies (as a string) a regular expression to match the description in each JSDoc comment (for example, ".+" requires a description; this option does not apply to descriptions in parameter or return tags)
+			matchDescription: '.+\\.',
+
+			// disallow missing description in parameter tags
+			requireParamDescription: true,
+
+			// disallow missing description in return tags
+			requireReturnDescription: true
+
+		}]
 
 	},
 	overrides: [{
@@ -463,11 +509,18 @@ module.exports = {
 			mocha: true
 		},
 		rules: {
+
 			// Disallow usage of expressions in statement position
 			'no-unused-expressions': 'off',
+
 			'max-statements': ['warn', {
 				max: 50
-			}]
+			}],
+
+			// Turn off jsdoc rules
+			'require-jsdoc': 'off',
+			'valid-jsdoc': 'off'
+
 		}
 	}]
 };
