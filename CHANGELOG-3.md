@@ -1,5 +1,11 @@
 # @financialforcedev/eslint-config
 
+## 3.2.0
+
+### NEW FEATURES
+
+- Add configuration to validate documentation.
+
 ## 3.1.0
 
 ### NEW FEATURES
