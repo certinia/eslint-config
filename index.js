@@ -479,10 +479,10 @@ module.exports = {
 				array: 'Array',
 				Boolean: 'boolean',
 				Integer: 'integer',
-				Number: 'number',
+				number: 'Number',
 				'function': 'Function',
 				object: 'Object',
-				String: 'string'
+				string: 'String'
 			},
 
 			// requires a return tag if and only if the function or method has a return statement (this option value does apply to constructors)
