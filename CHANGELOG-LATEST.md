@@ -2,4 +2,4 @@
 
 ## Latest changes (not yet released)
 
-- Updated eslint version
+- Updated eslint version.
