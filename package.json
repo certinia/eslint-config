@@ -1,8 +1,9 @@
 {
 	"name": "@financialforcedev/eslint-config",
-	"version": "4.0.0",
+	"version": "5.0.0",
 	"description": "FinancialForce ESLint configuration",
-	"main": "index.js",
+	"main": "base.js",
+	"files": ["base.js"],
 	"scripts": {
 		"test": "eslint ."
 	},
@@ -14,7 +15,12 @@
 	"author": "financialforce",
 	"license": "BSD-3-Clause",
 	"dependencies": {
-		"ajv": "6.2.0",
-		"eslint": "4.18.1"
+		"ajv": "^6.10.0",
+		"babel-eslint": "^10.0.1",
+		"eslint": "^5.16.0",
+		"eslint-plugin-import": "2.17.2",
+		"eslint-config-prettier": "^4.1.0",
+		"eslint-plugin-jsx-a11y": "^6.2.1",
+		"prettier": "^1.13.0"
 	}
 }
