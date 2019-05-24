@@ -13,16 +13,16 @@ To add the config to ```package.json```:
 
 ```
 	{
-	"eslintConfig": {
-		"extends": "eslint-config"
-	}
+		"eslintConfig": {
+			"extends": "eslint-config"
+		}
 	}
 ```
 To add the config to ```.eslintrc```:
 
 ```
 	{
-	"extends": "eslint-config"
+		"extends": "eslint-config"
 	}
 ```
 or add the config to ```.eslintrc.js```:
