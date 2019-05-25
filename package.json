@@ -5,7 +5,7 @@
 	"main": "base.js",
 	"files": ["base.js"],
 	"scripts": {
-		"test": "eslint ."
+
 	},
 	"repository": {
 		"type": "git",

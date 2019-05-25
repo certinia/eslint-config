@@ -1,8 +1,16 @@
-# Eslint config.
+# ESlint config.
 
 FinancialForce ESLint configuration.
 
 ## Installation
+Clone the repository and run
+
+```
+$ npm pack
+```
+
+This will create a tarball file in the root folder. Move the file into the root of the target project
+and run
 
 ```
 $ npm install @financialforcedev/eslint-config  --save-dev
