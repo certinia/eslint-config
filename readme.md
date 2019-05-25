@@ -20,19 +20,19 @@ $ npm install @financialforcedev/eslint-config  --save-dev
 
 add the config to ```.eslintrc.js```:
 ```
-	module.exports = {
-		extends: "@financialforcedev/eslint-config/base.js",
-		"rules": {
-	// add your own rules example
-			"no-var": "error",
+module.exports = {
+	extends: "@financialforcedev/eslint-config/base.js",
+	"rules": {
+// add your own rules example
+		"no-var": "error",
 
-	// if you want to override prettier rules add the example below
-			"prettier/prettier": [
-				"error",
-				{
-					"semi": false
-				}
-			]
-		}
+// if you want to override prettier rules add the example below
+		"prettier/prettier": [
+			"error",
+			{
+				"semi": false
+			}
+		]
 	}
+}
 ```
