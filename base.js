@@ -532,16 +532,7 @@ module.exports = {
 
 			// Turn off jsdoc rules
 			'require-jsdoc': 'off',
-			'valid-jsdoc': 'off',
-
-			// 'prettier/prettier': [
-			// 	'error',
-			// 	{
-			// 	  singleQuote: true,
-			// 	  trailingComma: 'none',
-			// 	  semi: true
-			// 	}
-			// ]
+			'valid-jsdoc': 'off'
 		}
 	}]
 };
