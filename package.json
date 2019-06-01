@@ -3,10 +3,10 @@
 	"version": "5.0.0",
 	"description": "FinancialForce ESLint configuration",
 	"main": "base.js",
-	"files": ["base.js"],
-	"scripts": {
-
-	},
+	"files": [
+		"base.js"
+	],
+	"scripts": {},
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/financialforcedev/eslint-config"

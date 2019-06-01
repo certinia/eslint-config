@@ -9,21 +9,23 @@ Clone the repository and run
 $ npm pack
 ```
 
-This will create a tarball file in the root folder. Move the file into the root of the target project
+This will create the tarball file financialforcedev-eslint-config-5.0.0.tgz in the root folder. Move the file into the root of the target project
 and run
 
 ```
-$ npm install @financialforcedev/eslint-config  --save-dev
+$ npm init -y
+$ npm install financialforcedev-eslint-config-5.0.0.tgz  eslint-plugin-prettier@latest --save-dev
 ```
 
 ## Usage
 
-add the config to ```.eslintrc.js```:
+add the following config to ```.eslintrc.js```:
 ```
 module.exports = {
 	extends: "@financialforcedev/eslint-config/base.js",
+	"globals": {},
 	"rules": {
-// add your own rules example
+// add your own rules for example
 		"no-var": "error",
 
 // if you want to override prettier rules add the example below
