@@ -27,7 +27,6 @@
 'use strict';
 
 module.exports = {
-	'extends': 'eslint:recommended',
 	env: {
 		node: true,
 		es6: true,
@@ -509,9 +508,9 @@ module.exports = {
 		'prettier/prettier': [
 			'error',
 			{
-			  singleQuote: true,
-			  trailingComma: 'none',
-			  semi: true
+				singleQuote: true,
+				trailingComma: 'none',
+				semi: true
 			}
 		]
 
