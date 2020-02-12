@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2017, FinancialForce.com, inc
+ * Copyright (c) 2017-2020, FinancialForce.com, inc
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
@@ -24,27 +24,32 @@
  *  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  **/
 
-'use strict';
-
 module.exports = {
-	'extends': 'eslint:recommended',
+	['extends']: 'eslint:recommended',
 	env: {
 		node: true,
 		es6: true,
 		browser: false
 	},
 	parserOptions: {
-		ecmaVersion: 8
+		ecmaVersion: '2018',
+		sourceType: 'module'
 	},
+	plugins: ['prettier'],
 	root: true,
 	rules: {
-
 		// Require that all functions are run in strict mode
 		strict: 'error',
 
 		// *****************************************
 		// ***** Possible Errors *******************
 		// *****************************************
+
+		'array-bracket-spacing': ['error', 'never'],
+
+		'object-curly-spacing': ['error', 'always'],
+
+		'arrow-parens': ['error', 'always'],
 
 		// Disallow assignment in conditional expressions
 		'no-cond-assign': 'warn',
@@ -133,9 +138,12 @@ module.exports = {
 		// Enforce a maximum cyclomatic complexity allowed in a program
 		//
 		// https://ariya.io/2012/12/complexity-analysis-of-javascript-code
-		complexity: ['warn', {
-			max: 20
-		}],
+		complexity: [
+			'warn',
+			{
+				max: 20
+			}
+		],
 
 		// Require return statements to either always or never specify values
 		'consistent-return': 'warn',
@@ -199,10 +207,13 @@ module.exports = {
 		'no-implied-eval': 'warn',
 
 		// Disallow use of labels for anything other then loops and switches
-		'no-labels': ['error', {
-			allowLoop: true,
-			allowSwitch: true
-		}],
+		'no-labels': [
+			'error',
+			{
+				allowLoop: true,
+				allowSwitch: true
+			}
+		],
 
 		// Disallow unnecessary nested blocks
 		'no-lone-blocks': 'warn',
@@ -284,10 +295,13 @@ module.exports = {
 		'no-undef': 'error',
 
 		// Disallow unused variables
-		'no-unused-vars': ['error', {
-			vars: 'all',
-			args: 'none'
-		}],
+		'no-unused-vars': [
+			'error',
+			{
+				vars: 'all',
+				args: 'none'
+			}
+		],
 
 		// Disallow use of variables before they are defined
 		'no-use-before-define': 'error',
@@ -312,10 +326,13 @@ module.exports = {
 		'comma-dangle': ['error', 'never'],
 
 		// Enforce spacing before and after comma
-		'comma-spacing': ['warn', {
-			before: false,
-			after: true
-		}],
+		'comma-spacing': [
+			'warn',
+			{
+				before: false,
+				after: true
+			}
+		],
 
 		// Enforce one true comma style
 		'comma-style': ['error', 'last'],
@@ -333,49 +350,74 @@ module.exports = {
 		'func-style': ['warn', 'declaration', { allowArrowFunctions: true }],
 
 		// Enforce consistent indentation
-		indent: ['warn', 'tab', {
-			SwitchCase: 1
-		}],
+		indent: [
+			'warn',
+			'tab',
+			{
+				SwitchCase: 1
+			}
+		],
 
 		// Enforces spacing between keys and values in object literal properties
-		'key-spacing': ['warn', {
-			beforeColon: false,
-			afterColon: true
-		}],
+		'key-spacing': [
+			'warn',
+			{
+				beforeColon: false,
+				afterColon: true
+			}
+		],
 
 		// Enforce consistent spacing before and after keywords
-		'keyword-spacing': ['warn', {
-			before: true,
-			after: true
-		}],
+		'keyword-spacing': [
+			'warn',
+			{
+				before: true,
+				after: true
+			}
+		],
 
 		// Enforce a maximum depth that blocks can be nested
-		'max-depth': ['warn', {
-			max: 4
-		}],
+		'max-depth': [
+			'warn',
+			{
+				max: 4
+			}
+		],
 
 		// Enforce a maximum file length
-		'max-lines': ['warn', {
-			max: 1000,
-			skipBlankLines: true,
-			skipComments: true
-		}],
+		'max-lines': [
+			'warn',
+			{
+				max: 1000,
+				skipBlankLines: true,
+				skipComments: true
+			}
+		],
 
 		// Enforce a maximum depth that callbacks can be nested
 		// Increased from 3 to 10 as each of the describe/it counts as a callback
-		'max-nested-callbacks': ['warn', {
-			max: 10
-		}],
+		'max-nested-callbacks': [
+			'warn',
+			{
+				max: 10
+			}
+		],
 
 		// Enforce a maximum number of parameters in function definitions
-		'max-params': ['warn', {
-			max: 5
-		}],
+		'max-params': [
+			'warn',
+			{
+				max: 5
+			}
+		],
 
 		// Enforce a maximum number of statements allowed in function blocks
-		'max-statements': ['warn', {
-			max: 30
-		}],
+		'max-statements': [
+			'warn',
+			{
+				max: 30
+			}
+		],
 
 		// Require a capital letter for constructors
 		'new-cap': 'error',
@@ -387,11 +429,14 @@ module.exports = {
 		'no-mixed-spaces-and-tabs': 'warn',
 
 		// Disallow multiple empty lines
-		'no-multiple-empty-lines': ['warn', {
-			max: 1,
-			maxBOF: 0,
-			maxEOF: 1
-		}],
+		'no-multiple-empty-lines': [
+			'warn',
+			{
+				max: 1,
+				maxBOF: 0,
+				maxEOF: 1
+			}
+		],
 
 		// Disallow trailing whitespace at the end of lines
 		'no-trailing-spaces': 'warn',
@@ -405,10 +450,8 @@ module.exports = {
 		// There can only be one var statement inside a function
 		'one-var': 'error',
 
-		// Only keys which are not valid object literal keys may be quoted. Disallow reserved words being used as object literal keys.
-		'quote-props': ['error', 'as-needed', {
-			keywords: true
-		}],
+		// Only keys which are not valid object literal keys may be quoted.
+		'quote-props': ['error', 'as-needed'],
 
 		// Use Single quotes
 		quotes: ['error', 'single', 'avoid-escape'],
@@ -419,28 +462,40 @@ module.exports = {
 		// Enforce semicolons
 		semi: ['error', 'always'],
 
-		'space-before-blocks': ['warn', {
-			functions: 'always',
-			keywords: 'always',
-			classes: 'always'
-		}],
+		'space-before-blocks': [
+			'warn',
+			{
+				functions: 'always',
+				keywords: 'always',
+				classes: 'always'
+			}
+		],
 
 		// Require a space after function names
-		'space-before-function-paren': ['warn', {
-			anonymous: 'always',
-			named: 'ignore'
-		}],
+		'space-before-function-paren': [
+			'warn',
+			{
+				anonymous: 'always',
+				named: 'ignore'
+			}
+		],
 
 		// Require spacing around infix operators
-		'space-infix-ops': ['warn', {
-			int32Hint: true
-		}],
+		'space-infix-ops': [
+			'warn',
+			{
+				int32Hint: true
+			}
+		],
 
 		// Require or disallow spaces before/after unary operators
-		'space-unary-ops': ['warn', {
-			words: true,
-			nonwords: false
-		}],
+		'space-unary-ops': [
+			'warn',
+			{
+				words: true,
+				nonwords: false
+			}
+		],
 
 		// *****************************************
 		// *****  ES6 Features *********************
@@ -464,63 +519,149 @@ module.exports = {
 		'require-jsdoc': 'off',
 
 		// enforce valid and consistent JSDoc comments
-		'valid-jsdoc': ['error', {
+		'valid-jsdoc': [
+			'error',
+			{
+				// enforces consistent documentation tags specified by an object whose properties mean instead of key use value
+				prefer: {
+					arg: 'param',
+					argument: 'param',
+					['return']: 'returns',
+					virtual: 'abstract'
+				},
 
-			// enforces consistent documentation tags specified by an object whose properties mean instead of key use value
-			prefer: {
-				arg: 'param',
-				argument: 'param',
-				'return': 'returns',
-				virtual: 'abstract'
-			},
+				// enforces consistent type strings specified by an object whose properties mean instead of key use value
+				preferType: {
+					array: 'Array',
+					Boolean: 'boolean',
+					Integer: 'integer',
+					Number: 'number',
+					['function']: 'Function',
+					object: 'Object',
+					String: 'string'
+				},
 
-			// enforces consistent type strings specified by an object whose properties mean instead of key use value
-			preferType: {
-				array: 'Array',
-				Boolean: 'boolean',
-				Integer: 'integer',
-				Number: 'number',
-				'function': 'Function',
-				object: 'Object',
-				String: 'string'
-			},
+				// requires a return tag if and only if the function or method has a return statement (this option value does apply to constructors)
+				requireReturn: false,
 
-			// requires a return tag if and only if the function or method has a return statement (this option value does apply to constructors)
-			requireReturn: false,
+				// disallow missing type in return tags
+				requireReturnType: true,
 
-			// disallow missing type in return tags
-			requireReturnType: true,
+				// specifies (as a string) a regular expression to match the description in each JSDoc comment (for example, '.+' requires a description; this option does not apply to descriptions in parameter or return tags)
+				matchDescription: '.+\\.',
 
-			// specifies (as a string) a regular expression to match the description in each JSDoc comment (for example, ".+" requires a description; this option does not apply to descriptions in parameter or return tags)
-			matchDescription: '.+\\.',
+				requireParamType: true,
 
-			// disallow missing description in parameter tags
-			requireParamDescription: true,
+				// disallow missing description in parameter tags
+				requireParamDescription: true,
 
-			// disallow missing description in return tags
-			requireReturnDescription: true
+				// disallow missing description in return tags
+				requireReturnDescription: true
+			}
+		],
 
-		}]
-
+		// *****************************************
+		// ************ Prettier *******************
+		// *****************************************
+		'prettier/prettier': [
+			'error',
+			{
+				arrowParens: 'always',
+				printWidth: 100,
+				semi: true,
+				singleQuote: true,
+				tabWidth: 4,
+				useTabs: true
+			}
+		]
 	},
-	overrides: [{
-		files: ['*.spec.js'],
-		env: {
-			mocha: true
+	overrides: [
+		{
+			files: ['*.spec.js'],
+			env: {
+				mocha: true
+			},
+			rules: {
+				// Allow usage of expressions in statement position
+				'no-unused-expressions': 'off',
+
+				'max-statements': [
+					'warn',
+					{
+						max: 50
+					}
+				],
+
+				// Turn off jsdoc rules
+				'require-jsdoc': 'off',
+				'valid-jsdoc': 'off'
+			}
 		},
-		rules: {
-
-			// Disallow usage of expressions in statement position
-			'no-unused-expressions': 'off',
-
-			'max-statements': ['warn', {
-				max: 50
-			}],
-
-			// Turn off jsdoc rules
-			'require-jsdoc': 'off',
-			'valid-jsdoc': 'off'
-
+		{
+			files: ['**/*.ts'],
+			['extends']: [
+				'plugin:@typescript-eslint/recommended',
+				'plugin:@typescript-eslint/recommended-requiring-type-checking'
+			],
+			parser: '@typescript-eslint/parser',
+			parserOptions: {
+				project: 'tsconfig.json'
+			},
+			plugins: ['@typescript-eslint'],
+			rules: {
+				'@typescript-eslint/adjacent-overload-signatures': 'error',
+				'@typescript-eslint/array-type': 'error',
+				'@typescript-eslint/ban-types': 'error',
+				'@typescript-eslint/class-name-casing': 'error',
+				'@typescript-eslint/consistent-type-assertions': 'error',
+				'@typescript-eslint/explicit-function-return-type': 'off',
+				'@typescript-eslint/indent': 'off',
+				'@typescript-eslint/interface-name-prefix': 'off',
+				'@typescript-eslint/no-empty-function': 'error',
+				'@typescript-eslint/no-empty-interface': 'error',
+				'@typescript-eslint/no-explicit-any': 'off',
+				'@typescript-eslint/no-misused-new': 'error',
+				'@typescript-eslint/no-namespace': 'off',
+				'@typescript-eslint/no-parameter-properties': 'off',
+				'@typescript-eslint/no-use-before-define': 'off',
+				'@typescript-eslint/no-unused-vars': 'off',
+				'@typescript-eslint/no-var-requires': 'error',
+				'@typescript-eslint/prefer-for-of': 'error',
+				'@typescript-eslint/prefer-function-type': 'error',
+				'@typescript-eslint/prefer-namespace-keyword': 'error',
+				'@typescript-eslint/quotes': ['off'],
+				'@typescript-eslint/triple-slash-reference': 'error',
+				'@typescript-eslint/unified-signatures': 'error',
+				'one-var': ['error', 'never'],
+				'valid-jsdoc': [
+					'error',
+					{
+						requireParamType: false,
+						requireReturnType: false
+					}
+				]
+			}
+		},
+		{
+			files: ['**/*.test.ts'],
+			env: {
+				jest: true
+			},
+			rules: {
+				'@typescript-eslint/no-empty-function': 'off',
+				'@typescript-eslint/no-non-null-assertion': 'off',
+				'@typescript-eslint/no-var-requires': 'off',
+				'@typescript-eslint/unbound-method': 'off',
+				'max-classes-per-file': 'off',
+				'no-unused-expressions': 'off',
+				'max-lines': 'off',
+				'max-statements': [
+					'warn',
+					{
+						max: 50
+					}
+				]
+			}
 		}
-	}]
+	]
 };
