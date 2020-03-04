@@ -632,7 +632,7 @@ module.exports = {
 				'@typescript-eslint/no-this-alias': 'error',
 				'@typescript-eslint/no-unnecessary-type-assertion': 'error',
 				'@typescript-eslint/no-unused-vars': 'error',
-				'@typescript-eslint/no-use-before-define': 'error',
+				'@typescript-eslint/no-use-before-define': 'off',
 				'@typescript-eslint/no-var-requires': 'error',
 				'@typescript-eslint/prefer-for-of': 'error',
 				'@typescript-eslint/prefer-function-type': 'error',
