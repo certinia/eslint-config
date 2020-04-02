@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2020, FinancialForce.com, inc
+ * Copyright (c) 2020, FinancialForce.com, inc
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
@@ -24,58 +24,17 @@
  *  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  **/
 
-const srcJavascript = require('./index/src/javascript');
-const srcPrettier = require('./index/src/prettier');
-const srcTypescript = require('./index/src/typescript');
-const testJavascript = require('./index/test/javascript');
-const testTypescript = require('./index/test/typescript');
-
 module.exports = {
-	['extends']: 'eslint:recommended',
-	env: {
-		node: true,
-		es6: true,
-		browser: false
-	},
-	parserOptions: {
-		ecmaVersion: '2018',
-		sourceType: 'module'
-	},
-	plugins: ['prettier'],
-	root: true,
-	rules: {
-		...srcPrettier,
-		...srcJavascript
-	},
-	overrides: [
+	'prettier/prettier': [
+		'error',
 		{
-			files: ['*.spec.js'],
-			env: {
-				mocha: true
-			},
-			rules: {
-				...testJavascript
-			}
-		},
-		{
-			files: ['**/*.ts'],
-			parser: '@typescript-eslint/parser',
-			parserOptions: {
-				project: 'tsconfig.json'
-			},
-			plugins: ['@typescript-eslint'],
-			rules: {
-				...srcTypescript
-			}
-		},
-		{
-			files: ['**/*.test.ts'],
-			env: {
-				jest: true
-			},
-			rules: {
-				...testTypescript
-			}
+			arrowParens: 'always',
+			printWidth: 100,
+			semi: true,
+			singleQuote: true,
+			tabWidth: 4,
+			trailingComma: 'none',
+			useTabs: true
 		}
 	]
 };

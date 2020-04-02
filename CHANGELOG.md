@@ -1,5 +1,9 @@
 # @financialforcedev/eslint-config
 
+## 4.0.0
+
+- Updated eslint version.
+
 ## 3.2.0
 
 ### NEW FEATURES

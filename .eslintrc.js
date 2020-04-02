@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright (c) 2017, FinancialForce.com, inc
  * All rights reserved.
  *

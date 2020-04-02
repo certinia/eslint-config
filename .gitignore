@@ -1,11 +1,6 @@
 .DS_Store
 
-*.sublime-workspace
-*.sublime-project
-
-local.test.properties
-local.run.properties
-
+.sfdx
 node_modules
 
 npm-debug.log

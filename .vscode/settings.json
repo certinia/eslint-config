@@ -1,33 +1,23 @@
 {
-	"beautify.language": {
-		"js": {
-			"type": [
-				"javascript",
-				"json"
-			],
-			"filename": [
-				".jsbeautifyrc"
-			]
-		}
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true
 	},
-	"beautify.ignore": [
-		"package.json",
-		"package-lock.json"
-	],
 	"editor.detectIndentation": false,
 	"editor.formatOnSave": true,
 	"editor.insertSpaces": false,
 	"files.exclude": {
-		"**/.nyc_output": true,
-		"**/.git": true,
-		"**/.svn": true,
-		"**/.hg": true,
-		"**/CVS": true,
 		"**/.DS_Store": true,
+		"**/.git": true,
+		"**/.hg": true,
+		"**/.svn": true,
+		"**/CVS": true,
 		"**/coverage": true
 	},
 	"files.insertFinalNewline": true,
+	"javascript.format.enable": false,
+	"json.format.enable": true,
 	"terminal.integrated.scrollback": 10000,
+	"typescript.format.enable": false,
 	"workbench.colorCustomizations": {
 		"activityBar.foreground": "#FF0000"
 	}
