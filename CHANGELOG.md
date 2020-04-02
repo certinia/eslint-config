@@ -1,5 +1,12 @@
 # @financialforcedev/eslint-config
 
+## 5.0.0
+
+### BREAKING CHANGES
+
+- Add typescript rules
+- Add prettier
+
 ## 4.0.0
 
 - Updated eslint version.
