@@ -17,8 +17,5 @@
 	"javascript.format.enable": false,
 	"json.format.enable": true,
 	"terminal.integrated.scrollback": 10000,
-	"typescript.format.enable": false,
-	"workbench.colorCustomizations": {
-		"activityBar.foreground": "#FF0000"
-	}
+	"typescript.format.enable": false
 }
