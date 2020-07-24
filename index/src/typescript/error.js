@@ -28,10 +28,8 @@ const simpleErrors = [
 	'@typescript-eslint/adjacent-overload-signatures',
 	'@typescript-eslint/array-type',
 	'@typescript-eslint/await-thenable',
-	'@typescript-eslint/ban-ts-ignore',
+	'@typescript-eslint/ban-ts-comment',
 	'@typescript-eslint/ban-types',
-	'@typescript-eslint/camelcase',
-	'@typescript-eslint/class-name-casing',
 	'@typescript-eslint/consistent-type-assertions',
 	'@typescript-eslint/member-delimiter-style',
 	'@typescript-eslint/no-array-constructor',
@@ -46,8 +44,6 @@ const simpleErrors = [
 	'@typescript-eslint/no-this-alias',
 	'@typescript-eslint/no-unnecessary-type-assertion',
 	'@typescript-eslint/no-non-null-assertion',
-	'@typescript-eslint/no-unused-vars',
-	'@typescript-eslint/no-use-before-define',
 	'@typescript-eslint/no-var-requires',
 	'@typescript-eslint/prefer-for-of',
 	'@typescript-eslint/prefer-function-type',
@@ -71,6 +67,82 @@ const simpleErrors = [
 
 module.exports = {
 	...simpleErrors,
+	'@typescript-eslint/naming-convention': [
+		'error',
+		{
+			selector: 'class',
+			format: ['PascalCase'],
+			leadingUnderscore: 'forbid',
+			trailingUnderscore: 'forbid'
+		},
+		{
+			selector: 'default',
+			format: ['camelCase'],
+			leadingUnderscore: 'forbid',
+			trailingUnderscore: 'forbid'
+		},
+		{
+			selector: 'enum',
+			format: ['PascalCase'],
+			leadingUnderscore: 'forbid',
+			trailingUnderscore: 'forbid'
+		},
+		{
+			selector: 'enumMember',
+			format: ['UPPER_CASE'],
+			leadingUnderscore: 'forbid',
+			trailingUnderscore: 'forbid'
+		},
+		{
+			selector: 'interface',
+			format: ['PascalCase'],
+			prefix: ['I'],
+			leadingUnderscore: 'forbid',
+			trailingUnderscore: 'forbid'
+		},
+		{
+			selector: 'method',
+			format: ['camelCase'],
+			leadingUnderscore: 'allow',
+			trailingUnderscore: 'forbid'
+		},
+		{
+			selector: 'property',
+			format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
+			leadingUnderscore: 'forbid',
+			trailingUnderscore: 'forbid'
+		},
+		{
+			selector: 'typeAlias',
+			format: ['PascalCase'],
+			leadingUnderscore: 'forbid',
+			trailingUnderscore: 'forbid'
+		},
+		{
+			selector: 'typeParameter',
+			format: ['PascalCase'],
+			leadingUnderscore: 'forbid',
+			trailingUnderscore: 'forbid'
+		},
+		{
+			selector: 'variable',
+			format: ['camelCase', 'UPPER_CASE'],
+			leadingUnderscore: 'forbid',
+			trailingUnderscore: 'forbid'
+		}
+	],
+	'@typescript-eslint/no-use-before-define': [
+		'error',
+		{
+			functions: false
+		}
+	],
+	'@typescript-eslint/no-unused-vars': [
+		'error',
+		{
+			args: 'none'
+		}
+	],
 	'one-var': ['error', 'never'],
 	'valid-jsdoc': [
 		'error',
