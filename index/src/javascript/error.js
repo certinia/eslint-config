@@ -177,7 +177,7 @@ module.exports = {
 			},
 			requireParamDescription: true,
 			requireParamType: true,
-			requireReturn: false,
+			requireReturn: true,
 			requireReturnDescription: true,
 			requireReturnType: true
 		}
